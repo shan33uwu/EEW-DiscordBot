@@ -1,7 +1,7 @@
 # EEW-DiscordBot
 一款開源的地震速報/報告發送機器人
 
-## ⚡ 安裝前，請先
+## ⚡ 啟動前，請先
 - 安裝 nextcord 及 requests
 
 ## ⚠️ 注意
