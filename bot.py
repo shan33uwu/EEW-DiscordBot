@@ -14,7 +14,19 @@ async def on_ready():
     check_earthquake_report.start()
     
     print(f'✅ {bot.user.name} 已經準備好了！')
-    
+
+max_list = {
+  1: "1 級",
+  2: "2 級",
+  3: "3 級",
+  4: "4 級",
+  5: "5 弱",
+  6: "5 強",
+  7: "6 弱",
+  8: "6 強",
+  9: "7 級"
+}
+
 last_report_id = None
 @tasks.loop(seconds=5)
 async def check_earthquake_report():
@@ -45,18 +57,6 @@ async def check_earthquake_report():
             
 def get_map_image_url(lat, lon):
     return f"https://static-maps.yandex.ru/1.x/?ll={lon},{lat}&z=10&l=map&size=650,450&pt={lon},{lat},round"
-
-max_list = {
-  1: "1 級",
-  2: "2 級",
-  3: "3 級",
-  4: "4 級",
-  5: "5 弱",
-  6: "5 強",
-  7: "6 弱",
-  8: "6 強",
-  9: "7 級"
-}
 
 last_earthquake_id = None
 @tasks.loop(seconds=1)
