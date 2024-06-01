@@ -1,4 +1,6 @@
 # EEW-DiscordBot
+一款開源的地震速報/報告發送機器人，由 杉杉33 開發
+
 
 <table>
 <tr>
@@ -10,3 +12,10 @@
 </td>
 </tr>
 </table>
+
+## ⚠️ 安裝前，請先
+- 安裝 nextcord 及 requests
+
+**開源許可證資訊請詳見 [LICENSE](LICENSE) 檔案**
+
+**Powered by RoboTech**
