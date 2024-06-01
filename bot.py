@@ -52,8 +52,7 @@ async def check_earthquake_report():
             embed.set_image(url=f'https://exptech.com.tw/file/images/report/{new_report.get("id")}.png')
             embed.set_footer(text='Data Provided by ExpTech')
             channel = bot.get_channel()
-            message = await channel.send(embed=embed)
-            await message.publish()
+            await channel.send(embed=embed)
             
 def get_map_image_url(lat, lon):
     return f"https://static-maps.yandex.ru/1.x/?ll={lon},{lat}&z=10&l=map&size=650,450&pt={lon},{lat},round"
@@ -79,10 +78,7 @@ async def earthquake_alert():
                 embed.set_image(url=map_image_url)
                 embed.set_footer(text="Data Provided by ExpTech")
                 channel = bot.get_channel()
-                message = await channel.send(embed=embed)
-                await message.publish()
-                
-                return
+                await channel.send(embed=embed)
                           
 @bot.slash_command(name='地震報告', description='查詢最新的地震報告')
 async def send_earthquake_report(interaction: Interaction):
