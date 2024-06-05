@@ -73,7 +73,7 @@ async def earthquake_alert():
                 discord_timestamp = f"<t:{timestamp}:F>"
                 max_intensity = eq_data['max']
                 max = max_list.get(max_intensity, 'Unknown')
-                embed = nextcord.Embed(title=':warning: 地震速報 ', description=f'{discord_timestamp} 於 {eq_data.get("loc")} 發生有感地震，慎防強烈搖晃\n預估規模 `{eq_data.get("mag")}` ，震源深度 `{eq_data.get("depth")}` 公里，最大震度 {max}\由 ExpTech Studio 提供 僅供參考，請以中央氣象署資料為準\n若感受到晃動請立即**【趴下、掩護、穩住】**', color=0xFF0000)
+                embed = nextcord.Embed(title=':warning: 地震速報 ', description=f'{discord_timestamp} 於 {eq_data.get("loc")} 發生有感地震，慎防強烈搖晃\n預估規模 `{eq_data.get("mag")}` ，震源深度 `{eq_data.get("depth")}` 公里，最大震度 {max}\n由 ExpTech Studio 提供 僅供參考，請以中央氣象署資料為準\n若感受到晃動請立即**【趴下、掩護、穩住】**', color=0xFF0000)
                 map_image_url = get_map_image_url(eq_data['lat'], eq_data['lon'])
                 embed.set_image(url=map_image_url)
                 embed.set_footer(text="Data Provided by ExpTech")
